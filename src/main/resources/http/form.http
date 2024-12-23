@@ -34,6 +34,9 @@ DELETE http://localhost:8080/forms/3
 ### Publish
 POST http://localhost:8080/forms/4/publish
 
+### Get Published
+GET http://localhost:8080/forms/published
+
 ### List Fields
 GET http://localhost:8080/forms/4/fields
 Accept: application/json

@@ -60,4 +60,10 @@ class FormController(
             ResponseEntity.notFound().build()
         }
     }
+
+    @GetMapping("/published")
+    fun getPublished(): ResponseEntity<List<FormDto>> {
+        val forms = formService.getPublished()
+        return ResponseEntity.ok(forms)
+    }
 }

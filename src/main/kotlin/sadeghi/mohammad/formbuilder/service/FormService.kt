@@ -52,6 +52,10 @@ class FormService(
         return true
     }
 
+    fun getPublished(): List<FormDto> {
+        return formRepository.findAllByIsPublished(isPublished = true).map { it.toDto() }
+    }
+
     fun getAllFields(id: Long): List<FieldDto>? {
         val form = formRepository.findByIdOrNull(id) ?: return null
         return form.toDto().fields
