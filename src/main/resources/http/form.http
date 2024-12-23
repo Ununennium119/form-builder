@@ -1,0 +1,59 @@
+### List
+GET http://localhost:8080/forms/
+Accept: application/json
+
+### Create
+POST http://localhost:8080/forms/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "",
+  "submitMethod": "POST",
+  "submitAddress": "http://example.com"
+}
+
+### Get
+GET http://localhost:8080/forms/4
+Accept: application/json
+
+### Update
+PUT http://localhost:8080/forms/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Form",
+  "submitMethod": "GET",
+  "submitAddress": "http://updated-example.com"
+}
+
+### Delete
+DELETE http://localhost:8080/forms/3
+
+### Publish
+POST http://localhost:8080/forms/4/publish
+
+### List Fields
+GET http://localhost:8080/forms/4/fields
+Accept: application/json
+
+### Update
+POST http://localhost:8080/forms/4/fields
+Content-Type: application/json
+Accept: application/json
+
+[
+  {
+    "name": "Field 3",
+    "label": "Label for Field 1",
+    "type": "TEXT",
+    "defaultValue": "Default Value 1"
+  },
+  {
+    "name": "Field 4",
+    "label": "Label for Field 2",
+    "type": "NUMBER",
+    "defaultValue": "10"
+  }
+]
